@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt0jwhdpt4wsx"]
+
+[ext_resource type="Texture2D" uid="uid://8nwo6usu76fy" path="res://assets/chess_pieces.png" id="1_a5b4o"]
+[ext_resource type="Script" path="res://scripts/sprite_button.gd" id="2_gpeoc"]
+
+[node name="ChessPieceButton" type="Sprite2D"]
+position = Vector2(157, 127)
+texture = ExtResource("1_a5b4o")
+hframes = 6
+vframes = 2
+frame = 4
+script = ExtResource("2_gpeoc")
+type = 4
+
+[node name="Button" type="TextureButton" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -18.0
+offset_right = -20.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_hover"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_stopped_hovering"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

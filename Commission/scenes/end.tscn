@@ -1,0 +1,200 @@
+[gd_scene load_steps=12 format=3 uid="uid://c6187ngoynep2"]
+
+[ext_resource type="Script" path="res://scripts/scenes/stalemate.gd" id="1_mr5fa"]
+
+[sub_resource type="SystemFont" id="SystemFont_1p5bt"]
+font_names = PackedStringArray("Bookman Old Style")
+
+[sub_resource type="LabelSettings" id="LabelSettings_e6b0w"]
+line_spacing = 1.0
+font = SubResource("SystemFont_1p5bt")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.831373)
+
+[sub_resource type="SystemFont" id="SystemFont_xnbh7"]
+font_names = PackedStringArray("Bookman Old Style")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cshmk"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f3m62"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfc5a"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o73lc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1s84o"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_r7jlw"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.580392, 0.94902, 0.235294, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 32
+Button/fonts/font = SubResource("SystemFont_xnbh7")
+Button/styles/disabled = SubResource("StyleBoxFlat_cshmk")
+Button/styles/focus = SubResource("StyleBoxFlat_f3m62")
+Button/styles/hover = SubResource("StyleBoxFlat_tfc5a")
+Button/styles/normal = SubResource("StyleBoxFlat_o73lc")
+Button/styles/pressed = SubResource("StyleBoxFlat_1s84o")
+
+[sub_resource type="Theme" id="Theme_2q5vr"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.729412, 0.219608, 0.235294, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 32
+Button/fonts/font = SubResource("SystemFont_xnbh7")
+Button/styles/disabled = SubResource("StyleBoxFlat_cshmk")
+Button/styles/focus = SubResource("StyleBoxFlat_f3m62")
+Button/styles/hover = SubResource("StyleBoxFlat_tfc5a")
+Button/styles/normal = SubResource("StyleBoxFlat_o73lc")
+Button/styles/pressed = SubResource("StyleBoxFlat_1s84o")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_mr5fa")
+
+[node name="Background" type="ColorRect" parent="."]
+top_level = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.733333)
+
+[node name="Text" type="Label" parent="Background"]
+z_index = 2
+z_as_relative = false
+layout_mode = 2
+offset_left = 35.0
+offset_top = 27.0
+offset_right = 286.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+text = "Draw!"
+label_settings = SubResource("LabelSettings_e6b0w")
+horizontal_alignment = 1
+
+[node name="UpdateText" type="Timer" parent="Background/Text"]
+wait_time = 0.05
+autostart = true
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 48.0
+offset_top = 124.0
+offset_right = 268.0
+offset_bottom = 171.0
+theme = SubResource("Theme_r7jlw")
+text = "Restart"
+
+[node name="Color" type="Button" parent="."]
+offset_left = 48.0
+offset_top = 176.0
+offset_right = 269.0
+offset_bottom = 223.0
+theme = SubResource("Theme_r7jlw")
+text = "Change Color"
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 47.0
+offset_top = 227.0
+offset_right = 268.0
+offset_bottom = 274.0
+theme = SubResource("Theme_2q5vr")
+text = "Quit
+"
+
+[connection signal="timeout" from="Background/Text/UpdateText" to="." method="_update"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Color" to="." method="_on_color_choice"]
+[connection signal="focus_entered" from="Exit" to="." method="_on_no_focus_entered"]
+[connection signal="focus_exited" from="Exit" to="." method="_on_no_focus_exited"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
