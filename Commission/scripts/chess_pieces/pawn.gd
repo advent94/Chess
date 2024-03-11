@@ -34,11 +34,11 @@ func get_move_pattern() -> Array[Vector2i]:
 	else:
 		result = move_pattern
 	return result
-
+	
 func should_be_promoted() -> bool:
 	assert(Chessboard.state.has(self))
 	var required_row_index = 0
-	if _color == ChessColor.BLACK:
+	if _color != Game.player:
 		required_row_index = Chessboard.ROWS - Constants.ZERO_INDEXING_OFFSET
 	var pos: Vector2i = Chessboard.index_to_pos(Chessboard.state.find(self))
 	return pos.y == required_row_index
