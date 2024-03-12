@@ -1,5 +1,10 @@
-# About this project
+# Showcase
 
+![Alt text](/screenshots/color.png?raw=true "Color choice screen")
+![Alt text](/screenshots/grid.png?raw=true "Grid")
+![Alt text](/screenshots/stalemate.png?raw=true "Stalemate")
+![Alt text](/screenshots/promotion.png?raw=true "Promotion")
+![Alt text](/screenshots/victory.png?raw=true "Victory")
 
 ## Repository
 
@@ -43,6 +48,8 @@ them are not in enemy range, you can move your king by two squares which will al
 *En Passant - from french, tresspassing. Pawns can capture enemy pawn when it's placed on third row on enemy side, it's first
 enemy piece move and it moves by two squares, passing your pawn by. This is when you can capture said piece diagonally, capturing
 same square as pawn would be in if it moved only one square.
+
+*Promotion - when your pawn reaches last rank, you get to promote him to knight, bishop, rook or queen!
 
 ## History
 I got commissioned to create simple Chess application in Godot in less than 3 days but requirements

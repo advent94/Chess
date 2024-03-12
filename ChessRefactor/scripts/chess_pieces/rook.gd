@@ -8,7 +8,7 @@ func _init(_color: ChessColor):
 	type = Type.ROOK
 	initialize(_color)
 
-static func get_move_pattern_static() -> Array[Vector2i]:
+static func create_move_pattern() -> Array[Vector2i]:
 	var moves: Array[Vector2i] = []
 	for i in range(1, 8):
 		moves.push_back(Vector2i(0, i))
@@ -18,4 +18,4 @@ static func get_move_pattern_static() -> Array[Vector2i]:
 	return moves
 
 func get_move_pattern() -> Array[Vector2i]:
-	return RookChessPiece.get_move_pattern_static()
+	return RookChessPiece.create_move_pattern()

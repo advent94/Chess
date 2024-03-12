@@ -453,7 +453,9 @@ func execute_movement(piece: ChessPiece, from: Vector2i, to: Vector2i):
 
 func update_move_history(new_move: Move):
 	assert(new_move != null, "Guard")
-	move_history.push_back(new_move) 
+	if move_history.size() == Constants.MAX_RECORDED_ACTIONS:
+		move_history = move_history.slice(2)
+	move_history.push_back(new_move)
 
 func handle_pawn_special_moves(pawn: ChessPiece, from: Vector2i, to: Vector2i):
 	if pawn.first_move:

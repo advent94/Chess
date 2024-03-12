@@ -114,16 +114,13 @@ func insufficient_mating_material() -> bool:
 
 func move_pattern_repeated() -> bool:	
 	return should_verify_move_history() && repeated_moves_limit_passed()
-
-const MAX_RECORDED_ACTIONS_PER_PLAYER: int = 3
-const MAX_RECORDED_ACTIONS: int = MAX_RECORDED_ACTIONS_PER_PLAYER * 2
 	
 func should_verify_move_history() -> bool:
-	return chessboard.move_history.size() == MAX_RECORDED_ACTIONS
+	return chessboard.move_history.size() == Constants.MAX_RECORDED_ACTIONS
 
 func repeated_moves_limit_passed() -> bool:
 	var move_history: Array[Chessboard.Move] = chessboard.move_history
-	assert(move_history.size() == MAX_RECORDED_ACTIONS)
+	assert(move_history.size() == Constants.MAX_RECORDED_ACTIONS)
 	
 	return move_history[0].eq(move_history[4]) && move_history[1].eq(move_history[5])
 #endregion
@@ -165,7 +162,7 @@ func check_game_status():
 		return end("Stalemate!")
 	
 	if is_king_checked():
-		print("Check")
+		Debug.log("Check")
 
 
 func victory() -> bool:
