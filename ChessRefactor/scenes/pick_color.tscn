@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://mttagooe1gk0"]
+
+[ext_resource type="Script" path="res://scripts/scenes/choose_color.gd" id="1_0ioww"]
+[ext_resource type="PackedScene" uid="uid://dt0jwhdpt4wsx" path="res://scenes/promotion/chess_piece_button.tscn" id="2_t1bdf"]
+
+[sub_resource type="SystemFont" id="SystemFont_1p5bt"]
+font_names = PackedStringArray("Bookman Old Style")
+
+[sub_resource type="LabelSettings" id="LabelSettings_e6b0w"]
+font = SubResource("SystemFont_1p5bt")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_0ioww")
+
+[node name="Background" type="ColorRect" parent="."]
+top_level = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.733333)
+
+[node name="Text" type="Label" parent="Background"]
+z_index = 2
+z_as_relative = false
+layout_mode = 2
+offset_left = 28.0
+offset_top = 27.0
+offset_right = 279.0
+offset_bottom = 87.0
+size_flags_vertical = 1
+text = "Choose"
+label_settings = SubResource("LabelSettings_e6b0w")
+horizontal_alignment = 1
+
+[node name="UpdateText" type="Timer" parent="Background/Text"]
+wait_time = 0.05
+autostart = true
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="Black King" parent="Buttons" instance=ExtResource("2_t1bdf")]
+position = Vector2(240, 193)
+frame = 6
+_color = 1
+
+[node name="White King" parent="Buttons" instance=ExtResource("2_t1bdf")]
+position = Vector2(74, 193)
+frame = 0
+
+[connection signal="timeout" from="Background/Text/UpdateText" to="." method="_update"]
+[connection signal="pressed" from="Buttons/Black King" to="." method="_on_button_press"]
+[connection signal="pressed" from="Buttons/White King" to="." method="_on_button_press"]

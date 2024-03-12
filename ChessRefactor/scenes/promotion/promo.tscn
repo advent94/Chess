@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://g4is5lyndtih"]
+
+[ext_resource type="Script" path="res://scripts/scenes/promotion.gd" id="1_7tnyi"]
+[ext_resource type="PackedScene" uid="uid://dt0jwhdpt4wsx" path="res://scenes/promotion/chess_piece_button.tscn" id="2_qfu8r"]
+
+[sub_resource type="SystemFont" id="SystemFont_1p5bt"]
+font_names = PackedStringArray("Bookman Old Style")
+
+[sub_resource type="LabelSettings" id="LabelSettings_e6b0w"]
+font = SubResource("SystemFont_1p5bt")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_7tnyi")
+
+[node name="Background" type="ColorRect" parent="."]
+top_level = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.733333)
+
+[node name="Label" type="Label" parent="Background"]
+z_index = 2
+z_as_relative = false
+layout_mode = 2
+offset_left = 35.0
+offset_top = 27.0
+offset_right = 286.0
+offset_bottom = 87.0
+size_flags_vertical = 1
+text = "Promotion"
+label_settings = SubResource("LabelSettings_e6b0w")
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="Queen" parent="Buttons" instance=ExtResource("2_qfu8r")]
+position = Vector2(269, 163)
+frame = 1
+_type = 1
+
+[node name="Rook" parent="Buttons" instance=ExtResource("2_qfu8r")]
+position = Vector2(202, 162)
+_type = 4
+
+[node name="Bishop" parent="Buttons" instance=ExtResource("2_qfu8r")]
+position = Vector2(126, 162)
+frame = 2
+_type = 2
+
+[node name="Knight" parent="Buttons" instance=ExtResource("2_qfu8r")]
+position = Vector2(56, 161)
+frame = 3
+_type = 3
