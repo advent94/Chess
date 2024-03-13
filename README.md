@@ -8,10 +8,9 @@
 
 ## Repository
 
-This repository will have at least three Godot projects inside. It will contain:
+This repository has two Godot projects inside. It will contain:
 1) Raw or Pre-refactor version (that was hacked quickly with very questionable design choices), 
 2) Object oriented design based around inheritance,
-3) Entity component system.
 
 ## Project
 Project is a game,
@@ -74,3 +73,5 @@ you do it later. I learned importance of designing and planning way before I tou
 what exactly needs to be inside the scope AND how it will roughly be implemented. Then knowing that, I have to prepare
 mental (or diagram) image how components are going to interact with each other. Each functionality should be testable
 and have as little dependency (ideally none) as possible.
+
+ECS is great system but it doesn't always apply to simple games.
